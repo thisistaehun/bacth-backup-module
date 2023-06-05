@@ -7,23 +7,37 @@ import { EnvVariableType } from './env-variable';
 export class EnvironmentConfigService implements DatabaseConfig {
   constructor(private configService: ConfigService<EnvVariableType>) {}
 
-  getDatabaseHost(): string {
+  public getDatabaseHost(): string {
     return this.configService.getOrThrow<string>('DATABASE_HOST');
   }
 
-  getDatabasePort(): number {
+  public getDatabasePort(): number {
     return this.configService.getOrThrow<number>('DATABASE_PORT');
   }
 
-  getDatabaseUser(): string {
+  public getDatabaseName(): string {
+    return this.configService.getOrThrow<string>('DATABASE_NAME');
+  }
+
+  public getDatabaseUser(): string {
     return this.configService.getOrThrow<string>('DATABASE_USER');
   }
 
-  getDatabasePassword(): string {
+  public getDatabasePassword(): string {
     return this.configService.getOrThrow<string>('DATABASE_PASSWORD');
   }
 
-  getDatabaseSchema(): string {
+  public getDatabaseSchema(): string {
     return this.configService.getOrThrow<string>('DATABASE_SCHEMA');
+  }
+
+  public getServerPort(): number {
+    return this.configService.getOrThrow<number>('SERVER_PORT');
+  }
+
+  public getRemoveOldBackupFilesDays(): number {
+    return this.configService.getOrThrow<number>(
+      'REMOVE_OLD_BACKUP_FILES_DAYS',
+    );
   }
 }

@@ -22,6 +22,10 @@ declare interface ReservedEnvironmentVariables {
   DATABASE_PORT: number;
   DATABASE_USER: string;
   DATABASE_PASSWORD: string;
-  DATABASE_NAME: string;
   DATABASE_SCHEMA: string;
+
+  /**
+   * Backup variables
+   */
+  REMOVE_OLD_BACKUP_FILES_DAYS: number;
 }
