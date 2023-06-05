@@ -9,7 +9,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "pm2": "pm2 start ecosystem.config.js",
-    "start": "nest start",
+    "start": "NODE_ENV=prod nest start",
     "start:dev": "NODE_ENV=local nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",

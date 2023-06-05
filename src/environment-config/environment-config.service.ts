@@ -15,10 +15,6 @@ export class EnvironmentConfigService implements DatabaseConfig {
     return this.configService.getOrThrow<number>('DATABASE_PORT');
   }
 
-  public getDatabaseName(): string {
-    return this.configService.getOrThrow<string>('DATABASE_NAME');
-  }
-
   public getDatabaseUser(): string {
     return this.configService.getOrThrow<string>('DATABASE_USER');
   }
