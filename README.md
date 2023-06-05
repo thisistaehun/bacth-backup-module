@@ -63,3 +63,9 @@ $ yarn run test:cov
 ```
 
 ## Run with pm2
+
+package.json의 `yarn pm2` scripts를 통해 pm2를 실행합니다. 실행에 관한 정의는 ecosystem.config.js 파일을 참고합니다.
+
+```bash
+yarn pm2
+```
